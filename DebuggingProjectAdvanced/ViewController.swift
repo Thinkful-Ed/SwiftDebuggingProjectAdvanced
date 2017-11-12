@@ -60,22 +60,23 @@ class ViewController: UIViewController, UITextFieldDelegate {
         checkGuess()
         return true
     }
-
-    @IBAction func guessMade(sender: AnyObject) {
-        guessTextField.resignFirstResponder()
-        checkGuess()
+  
+    @IBAction func GuessMade(_ sender: Any) {
+      guessTextField.resignFirstResponder()
+      checkGuess()
     }
+  
     @IBAction func playAgain(sender: AnyObject) {
-        //reset the game
-        gameModel.resetComputerRandomNumber()
-        guessFeedback.text = ""
-        tries = 0
-        //hide the play again button, display the game
-        playAgainButton.isHidden = true
-        guessTextField.isHidden = false
-        guessButton.isHidden = false
-        instructionsLabel.isHidden = false
-        instructionsLabel2.isHidden = false
-    }
+          //reset the game
+          gameModel.resetComputerRandomNumber()
+          guessFeedback.text = ""
+          tries = 0
+          //hide the play again button, display the game
+          playAgainButton.isHidden = true
+          guessTextField.isHidden = false
+          guessButton.isHidden = false
+          instructionsLabel.isHidden = false
+          instructionsLabel2.isHidden = false
+      }
 }
 
